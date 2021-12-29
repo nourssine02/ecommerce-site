@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+
+	<Section style="margin: 100px 300px 100px 320px ;">
+		<div class="container">
+
+
+			<h4 class="mtext-105 cl2 txt-center p-b-30">
+				Create an account
+			</h4>
+			<h6 class="mtext-60 cl2 txt-center p-b-30">
+				if you have an account !
+				<a href="{{ path('securite_login')}}">Connexion</a>
+			</h6>
+			{{ form_start(form)}}
+			{{ form_row(form.username )}}
+			<div class="bor8 m-b-20 how-pos4-parent"></div>
+			{{ form_row(form.email) }}
+			<div class="bor8 m-b-20 how-pos4-parent"></div>
+			{{ form_row(form.password  )}}
+
+			<div class="bor8 m-b-20 how-pos4-parent"></div>
+			{{ form_row(form.confirm_password )}}
+
+			<div class="bor8 m-b-20 how-pos4-parent"></div>
+
+			<button class="flex-c-m stext-101 cl0 size-121 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer" type="submit">
+				Submit
+			</button>
+			{{ form_end(form) }}
+
+		</div>
+
+	</section>
+
+
+{% endblock %}
